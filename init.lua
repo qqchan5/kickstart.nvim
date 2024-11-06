@@ -193,6 +193,13 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Keybinds for managing tabs
+--
+-- See `:help tabpage` for more info
+vim.keymap.set('n', '<C-t><C-t>', ':tabnew<CR>', { silent = true, desc = 'Open new tab' })
+vim.keymap.set('n', '<C-t><C-w>', ':tabclose<CR>', { silent = true, desc = 'Close current tab' })
+vim.keymap.set('n', '<C-t><C-o>', ':tabonly<CR>', { silent = true, desc = 'Close all but current tab' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
